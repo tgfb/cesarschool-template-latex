@@ -41,6 +41,17 @@
 % Alterações realizadas para o template da biblioteca atualizado disponibilizado no site Versão 07.10.2020 (1.3) revisado pelas bibliotecárias do setor bibccen.pt@ufpe.br
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%%%%%%%%%%%%%%%%%%
+%
+% As alterações realizadas no leiaute original do 
+% MODELO LATEX ATUALIZADO BIBLIOTECA DO CCEN-UFPE - Versão 1.4 (16.10.2020) 
+% disponibilizado no overleaf adaptando o leiaute do modelo do CIn aos requisitos 
+% mínimos para escrita de dissertações e teses customizadas para a
+% CESAR School.
+%
+% Tiago Barros <Tiago Barros> Março/2023
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \documentclass[
 	% -- opções da classe memoir --
 	12pt,				% tamanho da fonte
@@ -277,15 +288,15 @@
 % ----------------------------------------------------------
 % LISTA E ABREVIATURAS E SIGLAS
 % ----------------------------------------------------------
-% \printglossary[type=\acronymtype,title={\listadesiglasname},nonumberlist]
-% \printglossaries
+\printglossary[type=\acronymtype,title={\listadesiglasname},nonumberlist]
+\printglossaries
 % compile uma vez com o comando \printglossaries e depois compile novamente com o comando \printglossaries comentado para as páginas glossário e siglas serem ocultadas.
 
 % ----------------------------------------------------------
 % LISTA E ABREVIATURAS E SIGLAS
 % ----------------------------------------------------------
 % \setglossarystyle{modsuper}
-\printnoidxglossary[style=modsuper,type=\acronymtype,title={\listadesiglasname},nonumberlist]
+% \printnoidxglossary[style=modsuper,type=\acronymtype,title={\listadesiglasname},nonumberlist]
 % \printglossary[style=super, type=\acronymtype]
 \cleardoublepage
 
