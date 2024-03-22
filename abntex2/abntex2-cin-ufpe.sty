@@ -374,58 +374,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 % ---
 % Ata de defesa
 %   usar \imprimiratadefesa* casodeseje imprimir algo no verso da
@@ -552,38 +500,6 @@
   \end{center}
 }
 \makeatother
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -774,29 +690,6 @@
 \titlespacing{\subsubsection}{0cm}{0.85cm}{0.64cm}
 \titlespacing{\subsubsubsection}{0cm}{0.85cm}{0.64cm}
 \titlespacing{\subsubsubsubsection}{0cm}{0.85cm}{0.64cm}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1035,13 +928,6 @@
 
 
 
-
-
-
-
-
-
-
 % \usepackage{epigraph}
 
 % % \setlength{\epigraphrule}{0pt}
@@ -1255,7 +1141,28 @@
 \setfloatlocations{quadro}{hbtp}
 \makeatother         
             
-  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% criar lista de graficos
+
+\makeatletter
+% Novo list of (listings) para GRAFICOS
+\newcommand{\graficoname}{Gráfico}
+\newcommand{\listofgraficosname}{Lista de gráficos}
+
+\newfloat[chapter]{grafico}{logr}{\graficoname}
+\newlistof{listofgraficos}{logr}{\listofgraficosname}
+\newlistentry{grafico}{logr}{0}
+
+% configurações para atender às regras da ABNT
+\counterwithout{grafico}{chapter}
+\renewcommand{\cftgraficoname}{\graficoname\space} 
+\renewcommand*{\cftgraficoaftersnum}{\hfill--\hfill}
+
+% Configuração de posicionamento padrão:
+\setfloatlocations{grafico}{hbtp}
+\makeatother         
+             
 
 
 % ----------------------------------------------------------
@@ -1267,8 +1174,8 @@
 		pdftitle={\@title}, 
 		pdfauthor={\@author},
     	pdfsubject={\imprimirpreambulo},
-	    pdfcreator={LaTeX with abnTeX2 - change by bifm@cin.ufpe.br},
-		pdfkeywords={cin}{ufpe}{abnt}{latex}{abntex}{abntex2}{trabalho acadêmico}, 
+	    pdfcreator={LaTeX with abnTeX2 - change by tgfb@cesar.school},
+		pdfkeywords={cesar}{cesarschool}{abnt}{latex}{abntex}{abntex2}{trabalho acadêmico}, 
 		colorlinks=false,       		% false: boxed links; true: colored links
     	linkcolor=blue,          	% color of internal links
     	citecolor=blue,        		% color of links to bibliography
