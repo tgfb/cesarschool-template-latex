@@ -154,15 +154,18 @@
 \newcommand{\resumoname}{Resumo} 
 \newcommand{\listadesiglasname}{Lista de abreviaturas e siglas}
 \newcommand{\listadesimbolosname}{Lista de s\'imbolos}
-\newcommand{\fontename}{Fonte}
-\newcommand{\notaname}{Nota}
+\newcommand{\fontename}{Fonte:}
+\newcommand{\notaname}{Nota:}
+\newcommand{\areacocentracaoname}{Área de Concentração}
 %
 \addto\captionsbrazil{% portugues-brasil
   %% ajusta nomes padroes do babel
   \renewcommand{\bibname}{Refer\^encias}
   \renewcommand{\indexname}{\'Indice}
-  \renewcommand{\listfigurename}{Lista de Figuras}%ilustra\c{c}\~{o}es}
+  \renewcommand{\listfigurename}{Lista de Figuras} %ilustra\c{c}\~{o}es}
   \renewcommand{\listtablename}{Lista de tabelas}
+  \renewcommand{\lstlistingname}{Código Fonte}
+  \renewcommand{\lstlistlistingname}{Lista de códigos}
   %% ajusta nomes usados com a macro \autoref
   \renewcommand{\pageautorefname}{p\'agina}
   \renewcommand{\sectionautorefname}{se{\c c}\~ao}
@@ -172,12 +175,20 @@
 }
 \addto\captionsenglish{% ingles
   %% adjusts names from abnTeX2
-  \renewcommand{\bibname}{References}
+  \renewcommand{\bibname}{Bibliography}
   \renewcommand{\folhaderostoname}{Title page}
   \renewcommand{\epigraphname}{Epigraph}
   \renewcommand{\dedicatorianame}{Dedication}
   \renewcommand{\errataname}{Errata sheet}
   \renewcommand{\agradecimentosname}{Acknowledgements}
+  \renewcommand{\listofquadrosname}{List of charts}
+  \renewcommand{\quadroname}{Chart}
+  \renewcommand{\listofgraficosname}{List of plots}
+  \renewcommand{\graficoname}{Plot}
+  \renewcommand{\listofdiagramasname}{List of diagrams}
+  \renewcommand{\diagramaname}{Diagram}
+  \renewcommand{\lstlistingname}{Source Code}
+  \renewcommand{\lstlistlistingname}{List of source code}
   \renewcommand{\anexoname}{ANNEX}
   \renewcommand{\anexosname}{Annex}
   \renewcommand{\apendicename}{APPENDIX}
@@ -188,15 +199,19 @@
   \renewcommand{\resumoname}{Abstract} 
   \renewcommand{\listadesiglasname}{List of abbreviations and acronyms}
   \renewcommand{\listadesimbolosname}{List of symbols}
-  \renewcommand{\fontename}{Source}
-  \renewcommand{\notaname}{Note}
+  \renewcommand{\fontename}{Source:}
+  \renewcommand{\notaname}{Note:}
+  \renewcommand{\fautorname}{Elaborated by the author.}
+  \renewcommand{\fpesquisaname}{Research data.}
+  \renewcommand{\fadapt}{Adapted from }
    %% adjusts names used by \autoref
   \renewcommand{\pageautorefname}{page}
   \renewcommand{\sectionautorefname}{section}
   \renewcommand{\subsectionautorefname}{subsection}
   \renewcommand{\subsubsectionautorefname}{subsubsection}
   \renewcommand{\paragraphautorefname}{subsubsubsection}
-}
+  \renewcommand{\areacocentracaoname}{Concentration area}
+  }
 % ---
 
 % ---

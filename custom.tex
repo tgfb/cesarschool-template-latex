@@ -3,15 +3,28 @@
 % DADOS DO TRABALHO - CAPA e FOLHA DE ROSTO
 % Configure os dados do trabalho aqui
 % ----------------------------------------------------------
-\titulo{\textbf{Título:} subtítulo}
+%\newcommand{\instituicaoname}{Centro de Estudos e Sistemas Avançados do Recife - CESAR SCHOOL}
+%\newcommand{\programaname}{Programa de Doutorado Profissional em Engenharia de Software }
+%\newcommand{\programaname}{Programa de Mestrado Profissional em Engenharia de Software }
+%\newcommand{\trabalhoname}{Tese de Doutorado }
+%\newcommand{\trabalhoname}{Dissertação de Mestrado }
+
+%\newcommand{\instituicaoname}{Recife Center for Advanved Studies and Systems - CESAR SCHOOL}
+\newcommand{\instituicaoname}{CESAR SCHOOL}
+\newcommand{\programaname}{Professional Doctorate Program in Software Engineering }
+%\newcommand{\programaname}{Professional Masters Program in Software Engineering }
+\newcommand{\trabalhoname}{Thesis }
+%\newcommand{\trabalhoname}{Dissertation }
+
+\titulo{\uppercase{\textbf{Título:} subtítulo}}
 \autor{NOME COMPLETO DO (A) AUTOR (A)}
 \local{Recife}
 \data{\Year}
-\areaconcentracao{\textbf{Área de Concentração}: Texto Texto}
-\orientador{\textbf{Orientador (a)}: Texto Texto Texto}
-\coorientador{\textbf{Coorientador (a)}: Texto Texto Texto}
+%\areaconcentracao{\textbf{\areacocentracaoname}: Texto Texto}
+\orientador{\textbf{\orientadorname}: Texto Texto Texto}
+\coorientador{\textbf{\coorientadorname}: Texto Texto Texto}
 
-\instituicao{\textbf{Centro de Estudos e Sistemas Avançados do Recife - CESAR SCHOOL} \\ PROGRAMA DE PÓS-GRADUAÇÃO EM ENGENHARIA DE SOFTWARE}
+\instituicao{\textbf{\instituicaoname} }%\\ \programaname}
 %\departamento{Centro de Texto}
 \programa{Doutorado Profissional em Engenharia de Software}
 \emailprograma{contato@cesar.school}
@@ -19,16 +32,25 @@
 
 %\tipotrabalho{Trabalho de Conclusão de Curso}
 %\tipotrabalho{Dissertação de Mestrado}
-\tipotrabalho{Tese de Doutorado}
+\tipotrabalho{\trabalhoname}
 
 % O preambulo deve conter o tipo do trabalho, o objetivo, 
 % o nome da instituição e a área de concentração 
-%\preambulo{Dissertação apresentada ao Programa de Mestrado Profissional em Engenharia de Software do Centro de Estudos e Sistemas Avançados do Recife - CESAR School, como requisito parcial para obtenção do grau de Mestre em Engenharia de Software.}
-\preambulo{Tese apresentada ao Programa de Doutorado Profissional em Engenharia de Software do Centro de Estudos e Sistemas Avançados do Recife - CESAR School, como requisito parcial para obtenção do grau de Doutor em Engenharia de Software.}
 
-%\preambuloatadefesa{Dissertação apresentada ao Programa de Mestrado Profissional em Engenharia de Software do Centro de Estudos e Sistemas Avançados do Recife - CESAR School, como requisito parcial para a obtenção do título de Mestre em Engenharia de Software em <dia> de <mes> de <ano>.}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Protugues
+%%%%%%%%%%%%
+%\preambulo{\trabalhoname apresentada ao \programaname do \instituicaoname, como requisito parcial para obtenção do grau de Mestre em Engenharia de Software.}
 
-%\preambuloatadefesa{Tese apresentada ao Programa de Doutorado Profissional em Engenharia de Software do Centro de Estudos e Sistemas Avançados do Recife - CESAR School, como requisito parcial para a obtenção do título de Doutor em Engenharia de Software em <dia> de <mes> de <ano>.}
+%\preambuloatadefesa{\trabalhoname apresentada ao \programaname do \instituicaoname, como requisito parcial para a obtenção do título de Doutor em Engenharia de Software em <dia> de <mes> de <ano>.}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Ingles
+%%%%%%%%%
+\preambulo{\trabalhoname presented to the \programaname at the \instituicaoname, as a partial requirement to obtain the degree of Doctor in Software Engineering.}
+
+%\preambuloatadefesa{\trabalhoname presented to the \programaname at the \instituicaoname, as a partial requirement to obtain the degree of Doctor in Software Engineering at <month> <day>, <year>.}
 
 
 \input{userlists}

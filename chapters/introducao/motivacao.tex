@@ -19,7 +19,18 @@ Texto texto texto texto texto texto texto texto texto texto texto texto texto te
 \label{graph:grafico1}
 \fcolorbox{gray}{white}{\includegraphics[width=0.80\textwidth]{images/captitulo1/figuraex.png}}
 
-\par\medskip\ABNTEXfontereduzida\selectfont\textbf{Fonte:} \citeauthor{manualufpe2020} (\citeyear{manualufpe2020}) \par\medskip
+\fonteref{\citeauthor{manualufpe2020} (\citeyear{manualufpe2020})}
 \end{grafico}
 
-Texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto \gls{UFPE}.
+Texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto \gls{UFPE} ver Diagrama \ref{diag:diagrama1}.
+
+\begin{diagrama}[ht!]
+\centering
+
+\caption{\textmd{Texto do diagrama}}
+\label{diag:diagrama1}
+\fcolorbox{gray}{white}{\includegraphics[width=0.80\textwidth]{images/captitulo1/figuraex2.png}}
+
+\fonteadapt{\citeauthor{manualufpe2020} (\citeyear{manualufpe2020})}
+\end{diagrama}
+    

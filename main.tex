@@ -57,7 +57,7 @@
 	% -- opções da classe memoir --
 	12pt,				% tamanho da fonte
 	openright,			% capítulos começam em pág ímpar (insere página vazia caso preciso)
-	oneside,			% para impressão em verso e anverso. Oposto a oneside
+	twoside,			% para impressão em verso e anverso. Oposto a oneside
 	a4paper,			% tamanho do papel. 
 	% -- opções da classe abntex2 --
 	chapter=TITLE,		% títulos de capítulos convertidos em letras maiúsculas
@@ -65,12 +65,11 @@
 	%subsection=TITLE,	% títulos de subseções convertidos em letras maiúsculas
 	%subsubsection=TITLE,% títulos de subsubseções convertidos em letras maiúsculas
 	% -- opções do pacote babel --
-	%english,			% idioma adicional para hifenização
+	% -- o último idioma é o principal do documento --
 	french,				% idioma adicional para hifenização
 	spanish,			% idioma adicional para hifenização
-%	brazil,				% o último idioma é o principal do documento
-	english,
 	brazil,
+	english,
 	]{abntex2/abntex2}
 	\renewcommand{\baselinestretch}{1.5} %para customizar o espaço entre as linhas do texto
 % --
@@ -99,7 +98,7 @@
 \usepackage[utf8]{inputenc}		% Codificacao do documento (conversão automática dos acentos)
 \usepackage{lastpage}			% Usado pela Ficha catalográfica
 \usepackage{indentfirst}		% Indenta o primeiro parágrafo de cada seção.
-%\usepackage{color}				% Controle das cores
+\usepackage{color}				% Controle das cores
 \usepackage{graphicx}			% Inclusão de gráficos
 \usepackage{lipsum}				% para geração de dummy text
 \usepackage[versalete,alf,abnt-and-type=e,abnt-etal-list=0,abnt-etal-cite=3]{abntex2/abntex2cite} 
@@ -235,36 +234,24 @@
 \listofgraficos* % caso não tenha graficos, comente esta linha 
 \cleardoublepage
 
+% ----------------------------------------------------------
+% LISTA DE DIAGRAMAS
+% ----------------------------------------------------------
+\pdfbookmark[0]{\listofdiagramasname}{lod} % caso não tenha diagramas, comente esta linha 
+\listofdiagramas* % caso não tenha diagramas, comente esta linha 
+\cleardoublepage
 
-% ---
+% ----------------------------------------------------------
 % LISTA DE CÓDIGOS FONTES
-% ---
+% ----------------------------------------------------------
 
-\pdfbookmark[0]{\lstlistingname}{lol} % caso não tenha quadros, comente esta linha 
+\pdfbookmark[0]{\lstlistingname}{lol} % caso não tenha código fonte, comente as linhas abaixo
 \counterwithout{lstlisting}{chapter}
-
-
-
-% Altera o nome padrão do rótulo usado no comando \autoref{}
-\renewcommand{\lstlistingname}{Código Fonte}
-
-% Altera o rótulo a ser usando no elemento pré-textual "Lista de código"
-\renewcommand{\lstlistlistingname}{Lista de códigos}
-
-% Configura a ``Lista de Códigos'' conforme as regras da ABNT (para abnTeX2)
-\begingroup\makeatletter
-\let\newcounter\@gobble\let\setcounter\@gobbletwo
-  \globaldefs\@ne \let\c@loldepth\@ne
-  \newlistof{listings}{lol}{\lstlistlistingname}
-  \newlistentry{lstlisting}{lol}{0}
-\endgroup
-
-\renewcommand{\cftlstlistingaftersnum}{\hfill--\hfil}
 
 \let\oldlstlistoflistings\lstlistoflistings
 {
 \let\oldnumberline\numberline
-\newcommand{\algnumberline}[1]{Código Fonte~#1~\enspace--~\enspace}
+\newcommand{\algnumberline}[1]{\lstlistingname~#1~\enspace--~\enspace}
 \renewcommand{\numberline}{\algnumberline}
 
 \begin{KeepFromToc}
@@ -272,10 +259,13 @@
 \end{KeepFromToc}
 }
 \cleardoublepage
+% ----------------------------------------------------------
 
-% ---
+
+
+% ----------------------------------------------------------
 % LISTA DE QUADROS
-% ---
+% ----------------------------------------------------------
 \pdfbookmark[0]{\listofquadrosname}{loq} % caso não tenha quadros, comente esta linha 
 \listofquadros* % caso não tenha quadros, comente esta linha 
 \cleardoublepage
@@ -296,28 +286,23 @@
 % ----------------------------------------------------------
 % LISTA E ABREVIATURAS E SIGLAS
 % ----------------------------------------------------------
-\printglossary[type=\acronymtype,title={\listadesiglasname},nonumberlist]
-\printglossaries
+%\printglossary[type=\acronymtype,title={\listadesiglasname},nonumberlist]
+%\printglossaries
 % compile uma vez com o comando \printglossaries e depois compile novamente com o comando \printglossaries comentado para as páginas glossário e siglas serem ocultadas.
 
 % ----------------------------------------------------------
 % LISTA E ABREVIATURAS E SIGLAS
 % ----------------------------------------------------------
-% \setglossarystyle{modsuper}
-% \printnoidxglossary[style=modsuper,type=\acronymtype,title={\listadesiglasname},nonumberlist]
-% \printglossary[style=super, type=\acronymtype]
-\cleardoublepage
-
+%\setglossarystyle{modsuper}
+%\printnoidxglossary[style=modsuper,type=\acronymtype,title={\listadesiglasname},nonumberlist]
+%\printglossary[style=super, type=\acronymtype]
+%\cleardoublepage
 
 
 % ----------------------------------------------------------
 % LISTA DE SIMBOLOS
 % ----------------------------------------------------------
 \input{others/list_simbol}
-
-% ----------------------------------------------------------
-%\input{others/list_simbol}
-
 
 
 % ----------------------------------------------------------

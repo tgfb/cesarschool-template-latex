@@ -221,7 +221,7 @@
 \renewcommand{\imprimircapa}{%
   \begin{capa}%
     \center
-    \includegraphics[scale=0.1]{images/book-cover}\\ \vspace{0.5cm}
+%    \includegraphics[scale=0.1]{images/book-cover}\\ \vspace{0.5cm}
     
         { \ABNTEXchapterfont\fontsize{12}{12}\selectfont \imprimirinstituicao \\
     }
@@ -261,7 +261,7 @@
 % \renewcommand{\imprimircapa}{%
 %   \begin{capa}%
 %     \center
-%     \includegraphics[scale=0.65]{images/book-cover} \\
+%     \includegraphics[scale=0.1]{images/book-cover} \\
 %   % \fill
     
 
@@ -337,9 +337,11 @@
       \begin{minipage}{.55\textwidth}
       	\SingleSpacing
          \imprimirpreambulo
-            
-            \vspace*{1cm}
-            {\imprimirareaconcentracao\par}
+            \abntex@ifnotempty{\imprimirareaconcentracao}{
+              \vspace*{1cm}
+              {\imprimirareaconcentracao\par}
+              \vspace*{1cm}
+            }
             {\imprimirorientador\par}
                 \abntex@ifnotempty{\imprimircoorientador}{%
                {\imprimircoorientador}%
@@ -470,11 +472,13 @@
       	\SingleSpacing
          \imprimirpreambulo
             
-            \vspace*{1cm}
-            {\imprimirareaconcentracao\par}
-             \vspace*{1cm}
-            {\imprimirorientador\par}
-               \vspace*{0.5cm} \abntex@ifnotempty{\imprimircoorientador}{%
+         \abntex@ifnotempty{\imprimirareaconcentracao}{
+          \vspace*{1cm}
+          {\imprimirareaconcentracao\par}
+        }
+        \vspace*{1cm}
+        {\imprimirorientador\par}
+               \vspace*{0.3cm} \abntex@ifnotempty{\imprimircoorientador}{%
                {\imprimircoorientador}%
             }%
        \end{minipage}%
@@ -1161,8 +1165,44 @@
 
 % Configuração de posicionamento padrão:
 \setfloatlocations{grafico}{hbtp}
+\makeatother
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% criar lista de diagramas
+
+\makeatletter
+% Novo list of (listings) para DIAGRAMAS
+\newcommand{\diagramaname}{Diagrama}
+\newcommand{\listofdiagramasname}{Lista de diagramas}
+
+\newfloat[chapter]{diagrama}{lod}{\diagramaname}
+\newlistof{listofdiagramas}{lod}{\listofdiagramasname}
+\newlistentry{diagrama}{lod}{0}
+
+% configurações para atender às regras da ABNT
+\counterwithout{diagrama}{chapter}
+\renewcommand{\cftdiagramaname}{\diagramaname\space} 
+\renewcommand*{\cftdiagramaaftersnum}{\hfill--\hfill}
+
+% Configuração de posicionamento padrão:
+\setfloatlocations{diagrama}{hbtp}
 \makeatother         
              
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Configura a ``Lista de Códigos'' conforme as regras da ABNT (para abnTeX2)
+
+\begingroup\makeatletter
+\let\newcounter\@gobble\let\setcounter\@gobbletwo
+  \globaldefs\@ne \let\c@loldepth\@ne
+  \newlistof{listings}{lol}{\lstlistlistingname}
+  \newlistentry{lstlisting}{lol}{0}
+\endgroup
+
+\renewcommand{\cftlstlistingaftersnum}{\hfill--\hfil}
 
 
 % ----------------------------------------------------------
@@ -1209,12 +1249,17 @@
 
 \newcommand{\namereftag}[2]{\textbf{#1~\ref{#2}}}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Novos comandos para fontes de dados (legendas)
+%
+\newcommand{\fautorname}{Elaborado pelo autor.}
+\newcommand{\fpesquisaname}{Dados de pesquisa.}
+\newcommand{\fadapt}{Adaptado de }
 
-
-
-
-
-
+\newcommand{\fonteautor}{\par\medskip\ABNTEXfontereduzida\selectfont\textbf{\fontename} \fautorname \par\medskip}
+\newcommand{\fontepesquisa}{\par\medskip\ABNTEXfontereduzida\selectfont\textbf{\fontename} \fpesquisaname \par\medskip}
+\newcommand{\fonteadapt}[1]{\par\medskip\ABNTEXfontereduzida\selectfont\textbf{\fontename} \fadapt {#1}. \par\medskip}
+\newcommand{\fonteref}[1]{\par\medskip\ABNTEXfontereduzida\selectfont\textbf{\fontename} {#1}\par\medskip}
 
 
 
