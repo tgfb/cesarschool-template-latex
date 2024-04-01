@@ -47,9 +47,9 @@
 % MODELO LATEX ATUALIZADO BIBLIOTECA DO CCEN-UFPE - Versão 1.4 (16.10.2020) 
 % disponibilizado no overleaf adaptando o leiaute do modelo do CIn aos requisitos 
 % mínimos para escrita de dissertações e teses customizadas para a
-% CESAR School. Revisada pelo setor de biblioteca da CESAR School em 28/03/2024.
+% CESAR School. Revisada pelo setor de biblioteca da CESAR School em 02/04/2024.
 %
-% Tiago Barros <Tiago Barros> Março/2024
+% Tiago Barros <tgfb@cesar.school> Março/2024
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \documentclass[
@@ -102,9 +102,9 @@
 \usepackage{color}				% Controle das cores
 \usepackage{graphicx}			% Inclusão de gráficos
 \usepackage{lipsum}				% para geração de dummy text
-\usepackage[versalete,alf,abnt-and-type=e,abnt-etal-list=0,abnt-etal-cite=3]{abntex2/abntex2cite} 
+\usepackage[alf,abnt-and-type=e,abnt-cite-style=1,abnt-etal-list=3,abnt-etal-cite=3]{abntex2/abntex2cite} 
 \usepackage{multirow}
-\usepackage[section]{placeins}
+\usepackage[section]{placeins} 
 
 
 
@@ -320,7 +320,8 @@
 % ----------------------------------------------------------
 % Referências bibliográficas
 % ----------------------------------------------------------
-%\bibliographystyle{abntexalfenglish} %caso seja em inglês, retire o comentário desta linha
+%\bibliographystyle{abntex2/abntexalfenglish} %caso seja em inglês, retire o comentário desta linha e comente a seguinte
+\bibliographystyle{abntex2/abntex2-alf}
 \bibliography{references2}
 
 % ----------------------------------------------------------
