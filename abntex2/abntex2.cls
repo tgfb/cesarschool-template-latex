@@ -162,7 +162,7 @@
   %% ajusta nomes padroes do babel
   \renewcommand{\bibname}{Refer\^encias}
   \renewcommand{\indexname}{\'Indice}
-  \renewcommand{\listfigurename}{Lista de Figuras} %ilustra\c{c}\~{o}es}
+  \renewcommand{\listfigurename}{Lista de ilustra\c{c}\~{o}es}
   \renewcommand{\listtablename}{Lista de tabelas}
   \renewcommand{\lstlistingname}{Código Fonte}
   \renewcommand{\lstlistlistingname}{Lista de códigos}

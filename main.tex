@@ -47,9 +47,9 @@
 % MODELO LATEX ATUALIZADO BIBLIOTECA DO CCEN-UFPE - Versão 1.4 (16.10.2020) 
 % disponibilizado no overleaf adaptando o leiaute do modelo do CIn aos requisitos 
 % mínimos para escrita de dissertações e teses customizadas para a
-% CESAR School. Revisada pelo setor de biblioteca da CESAR School em 02/04/2024.
+% CESAR School. Revisada pelo setor de biblioteca da CESAR School em 04/04/2024.
 %
-% Tiago Barros <tgfb@cesar.school> Março/2024
+% Tiago Barros <tgfb@cesar.school> Abril/2024
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \documentclass[
@@ -218,26 +218,40 @@
 \input{others/resumo}
 
 % ----------------------------------------------------------
-% LISTA DE FIGURAS
+% LISTA DE FIGURAS (Ilustrações)
 % ----------------------------------------------------------
 \pdfbookmark[0]{\listfigurename}{lof}
 \listoffigures*
 \cleardoublepage
 
 % ----------------------------------------------------------
-% LISTA DE GRAFICOS
+% LISTA DE GRAFICOS - quando tiver mais de 10 Graficos
 % ----------------------------------------------------------
-\pdfbookmark[0]{\listofgraficosname}{logr} % caso não tenha graficos, comente esta linha 
-\listofgraficos* % caso não tenha graficos, comente esta linha 
-\cleardoublepage
+% \pdfbookmark[0]{\listofgraficosname}{logr} % caso não tenha mais de 10 graficos, comente esta linha 
+% \listofgraficos* % caso não tenha mais de 10 graficos, comente esta linha 
+% \cleardoublepage % caso não tenha mais de 10 graficos, comente esta linha 
 
 % ----------------------------------------------------------
-% LISTA DE DIAGRAMAS
+% LISTA DE DIAGRAMAS - quando tiver mais de 10 Diagramas
 % ----------------------------------------------------------
-\pdfbookmark[0]{\listofdiagramasname}{lod} % caso não tenha diagramas, comente esta linha 
-\listofdiagramas* % caso não tenha diagramas, comente esta linha 
-\cleardoublepage
+% \pdfbookmark[0]{\listofdiagramasname}{lod} % caso não tenha mais de 10 diagramas, comente esta linha 
+% \listofdiagramas* % caso não tenha mais de 10 diagramas, comente esta linha 
+% \cleardoublepage % caso não tenha mais de 10 diagramas, comente esta linha 
 
+% ----------------------------------------------------------
+% LISTA DE QUADROS
+% ----------------------------------------------------------
+%\pdfbookmark[0]{\listofquadrosname}{loq} % caso não tenha mais de 10 quadros, comente esta linha 
+%\listofquadros* % caso não tenha mais de 10 quadros, comente esta linha 
+%\cleardoublepage % caso não tenha mais de 10 quadros, comente esta linha 
+
+% ----------------------------------------------------------
+% LISTA DE TABELAS
+% ---------------------------------------------------------
+\pdfbookmark[0]{\listtablename}{lot}
+\listoftables*
+\cleardoublepage
+  
 % ----------------------------------------------------------
 % LISTA DE CÓDIGOS FONTES
 % ----------------------------------------------------------
@@ -256,20 +270,6 @@
 }
 \cleardoublepage
 
-% ----------------------------------------------------------
-% LISTA DE QUADROS
-% ----------------------------------------------------------
-\pdfbookmark[0]{\listofquadrosname}{loq} % caso não tenha quadros, comente esta linha 
-\listofquadros* % caso não tenha quadros, comente esta linha 
-\cleardoublepage
-
-% ----------------------------------------------------------
-% LISTA DE TABELAS
-% ---------------------------------------------------------
-\pdfbookmark[0]{\listtablename}{lot}
-\listoftables*
-\cleardoublepage
-  
 % ----------------------------------------------------------
 % LISTA E ABREVIATURAS E SIGLAS
 % ----------------------------------------------------------
@@ -295,9 +295,6 @@
 % ----------------------------------------------------------
 \pdfbookmark[0]{\contentsname}{toc}
 \tableofcontents*
-% \begingroup\intoctrue
-% \tableofcontents*
-% \endgroup
 \cleardoublepage
 
 % \setcounter{page}{13}

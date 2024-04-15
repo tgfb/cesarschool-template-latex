@@ -1132,9 +1132,15 @@
 \newcommand{\quadroname}{Quadro}
 \newcommand{\listofquadrosname}{Lista de quadros}
 
-\newfloat[chapter]{quadro}{loq}{\quadroname}
-\newlistof{listofquadros}{loq}{\listofquadrosname}
-\newlistentry{quadro}{loq}{0}
+%%%% Se o seu trabalho tiver mais do que 10 Quadros, descomente esse bloco
+%%%% e comente o bloco seguinte
+%\newfloat[chapter]{quadro}{loq}{\quadroname}
+%\newlistof{listofquadros}{loq}{\listofquadrosname}
+%\newlistentry{quadro}{loq}{0}
+
+\newfloat[chapter]{quadro}{lof}{\quadroname}
+\newlistof{listofquadros}{lof}{\listfigurename}
+\newlistentry{quadro}{lof}{0}
 
 % configurações para atender às regras da ABNT
 \counterwithout{quadro}{chapter}
@@ -1150,13 +1156,20 @@
 % criar lista de graficos
 
 \makeatletter
-% Novo list of (listings) para GRAFICOS
+% Nova lista para GRAFICOS
 \newcommand{\graficoname}{Gráfico}
 \newcommand{\listofgraficosname}{Lista de gráficos}
 
-\newfloat[chapter]{grafico}{logr}{\graficoname}
-\newlistof{listofgraficos}{logr}{\listofgraficosname}
-\newlistentry{grafico}{logr}{0}
+%%%% Se o seu trabalho tiver mais do que 10 Graficos, descomente esse bloco
+%%%% e comente o bloco seguinte
+% \newfloat[chapter]{grafico}{logr}{\graficoname}
+% \newlistof{listofgraficos}{logr}{\listofgraficosname}
+% \newlistentry{grafico}{logr}{0}
+
+%%%% Para trabalhos com menos do que 10 Graficos
+\newfloat[chapter]{grafico}{lof}{\graficoname}
+\newlistof{listofgraficos}{lof}{\listfigurename}
+\newlistentry{grafico}{lof}{0}
 
 % configurações para atender às regras da ABNT
 \counterwithout{grafico}{chapter}
@@ -1173,13 +1186,20 @@
 % criar lista de diagramas
 
 \makeatletter
-% Novo list of (listings) para DIAGRAMAS
+% Nova lista para DIAGRAMAS
 \newcommand{\diagramaname}{Diagrama}
 \newcommand{\listofdiagramasname}{Lista de diagramas}
 
-\newfloat[chapter]{diagrama}{lod}{\diagramaname}
-\newlistof{listofdiagramas}{lod}{\listofdiagramasname}
-\newlistentry{diagrama}{lod}{0}
+%%%% Se o seu trabalho tiver mais do que 10 Diagramas, descomente esse bloco
+%%%% e comente o bloco seguinte
+% \newfloat[chapter]{diagrama}{lod}{\diagramaname}
+% \newlistof{listofdiagramas}{lod}{\listofdiagramasname}
+% \newlistentry{diagrama}{lod}{0}
+
+%%%% Para trabalhos com menos do que 10 Diagramas
+\newfloat[chapter]{diagrama}{lof}{\diagramaname}
+\newlistof{listofdiagramas}{lof}{\listfigurename}
+\newlistentry{diagrama}{lof}{0}
 
 % configurações para atender às regras da ABNT
 \counterwithout{diagrama}{chapter}
